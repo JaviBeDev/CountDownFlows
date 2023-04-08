@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CounterFlowsTheme {
                 val viewModel = viewModel<MainViewModel>()
-                val time = viewModel.countDownFlow.collectAsState(initial = 15)
+                val time = viewModel.countDownFlow.collectAsState(initial = 10)
                 Box(modifier = Modifier.fillMaxSize()) {
                     Text(
                         text = time.value.toString(), fontSize = 30.sp, modifier = Modifier.align(
